@@ -665,6 +665,13 @@
             background-color: #002c93;
         }
 
+        /* Центрування останньої картки викладача на великих екранах */
+        @media (min-width: 992px) {
+            .center-card {
+            grid-column: 2;
+            }
+        }
+
         /* Мобільна версія: "Приклеєна" кнопка в самому низу екрана */
         @media (max-width: 600px) {
             .floating-cta {
@@ -1210,8 +1217,8 @@
             <p class="teacher-desc">Кандидат наук, педіатр і дитячий кардіолог, завідувач кафедри здоров’я матері та дитини Академії Добробут.</p>
         </div>
 
-         <div class="teacher-card">
-            <img src="img/бенюк.jpg" alt="Олеся Бенюк" class="teacher-photo">
+         <div class="teacher-card center-card">
+            <img src="img/бенюк.jpg" alt="Олеся Бенюк" class="teacher-photo" style="object-position: top;">
             <h4 class="teacher-name">Олеся Бенюк</h4>
             <p class="teacher-desc">кандидатка наук, фахівчиня з наукової етики та академічної доброчесності, доцентка Академії Добробут.</p>
         </div>
