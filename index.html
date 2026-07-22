@@ -78,21 +78,21 @@
         }
 
         /* --- ГОЛОВНИЙ ЕКРАН (HERO) --- */
+        /* --- ГОЛОВНИЙ ЕКРАН (HERO) --- */
         .hero {
             position: relative;
-            min-height: calc(100vh - 100px);
+            /* Убираем жесткую привязку к высоте экрана и центрирование */
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px 20px 120px;
+            padding: 80px 20px 120px; /* 80px — це відступ від хедера. Змінюй цю цифру для ідеального результату */
             text-align: center;
-        }
+            }
 
         .hero-container {
-            max-width: 820px;
+            max-width: 1100px; /* Розширили контейнер, щоб великому тексту вистачило місця */
             z-index: 2;
-        }
+            }
 
         .subtitle {
             font-size: 32px;
@@ -721,11 +721,10 @@
 }
 
         @media (min-width: 992px) {
-            h1.title-main .nowrap-desktop {
-            white-space: nowrap !important;
-            font-size: 42px !important;
-                }
+            .title-main {
+            white-space: nowrap;
             }
+        }
 
         /* Адаптив для мобільних */
         @media (max-width: 900px) {
