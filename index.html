@@ -28,17 +28,25 @@
         }
 
         /* --- ШАПКА --- */
+        /* Базовые стили для хедера (работают везде, включая мобильные) */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 30px 8%;
-            background: var(--white);
-            position: sticky;
-            top: 0; /* Прилипает к самому верху экрана */
-            z-index: 1000; /* Гарантирует, что меню будет поверх любых других элементов сайта */
-            background-color: #ffffff;
+            background: var(--white); 
+            /* Мы убрали отсюда sticky, top и z-index */
         }
+
+        /* Дополнительные стили ТОЛЬКО для экранов шире 768px (планшеты и ПК) */
+        @media (min-width: 768px) {
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background-color: #ffffff; /* Белый фон обязателен при прилипании */
+                }
+            }
 
         .logo {
             display: flex;
@@ -1124,7 +1132,7 @@
         <div class="teacher-card">
             <img src="img/войтенко.png" alt="Нана Войтенко" class="teacher-photo">
             <h4 class="teacher-name">Нана Войтенко</h4>
-            <p class="teacher-desc">Доктрока наук, професорка, науковиця-нейробіологиня, ректорка Академії Добробут.</p>
+            <p class="teacher-desc">Докторка наук, професорка, науковиця-нейробіологиня, ректорка Академії Добробут.</p>
         </div>
 
         <div class="teacher-card">
